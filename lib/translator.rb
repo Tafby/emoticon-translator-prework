@@ -5,7 +5,7 @@ def load_library(filePath)
   emot_hash = YAML.load_file(filePath)
   newHash = {"get_meaning" => {}, "get_emoticon" => {}}
   emot_hash.each do |meaning, emot|
-    newHash["get_meaning"][emot[1]] = meaning
+    newHash["get_meaning"][emot[1]] = meaning  #newHash = ["get_meaning" = {english emoticons}, "get_emoticon" = {}]
     newHash["get_emoticon"][emot[0]] = emot[1]  
   #angel: meaning
   #- "O:)"      english 
